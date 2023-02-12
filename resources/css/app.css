@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @apply bg-gradient-to-r from-blue-700 to-gray-900 text-white;
+}
+
+/* Navbar */
+.mobile-menu {
+    @apply text-xl;
+}
+
+.mobile-menu a:hover {
+    @apply text-teal-300 transition duration-300 font-bold;
+}
+
+.desktop-menu {
+    @apply flex gap-8 text-xl p-2;
+}
+
+.desktop-menu li:hover {
+    @apply text-teal-300 transition duration-300 font-bold;
+}
+
+/* Login/Register */
+form label {
+    @apply w-[300px];
+}
+
+form input {
+    @apply w-[300px] text-black py-1 px-2 font-sans rounded-lg outline-none my-6;
+}
+
+form button {
+    @apply border w-[300px] font-bold py-2 mt-4 rounded-lg;
+}
+
+form button:hover {
+    @apply bg-teal-600 border-transparent text-black;
+}
+
+form select {
+    @apply w-[300px] text-black py-1 px-2 font-sans rounded-lg outline-none my-6;
+}
+
+/* Errors */
+.invalid-feedback {
+    @apply text-yellow-400;
+}
+
+.is-invalid {
+    @apply outline-red-600;
+}
+
+/* Home Page */
+h1 {
+    @apply text-center font-bold text-4xl md:text-5xl;
+}
+
+p {
+    @apply text-lg leading-8;
+}
+
+.list li {
+    @apply flex items-center gap-4;
+}
+
+.vr-games {
+    @apply flex flex-col md:flex-row flex-wrap justify-center items-center gap-8;
+}
+
+.vr-games img {
+    @apply w-[300px] m-2;
+}
+
+/* VR Page */
+.manufacturer {
+    @apply flex flex-col md:flex-row flex-wrap justify-center items-center gap-4;
+}
+
+.manufacturer img {
+    @apply w-[400px] h-[100px] object-contain;
+}
+
+/* Comments Page */
+.comment-create-form label, input, textarea {
+    @apply flex flex-col justify-center items-center mx-auto;
+}
+
+textarea {
+    @apply w-[300px] p-2 text-black outline-none rounded-lg my-4;
+}
+
+/* Messages / Erros */
+.success {
+    @apply bg-green-600 w-[80%] md:w-[60%] max-w-[500px] text-center mx-auto p-2 rounded-md mb-10;
+}
+
+.edit {
+    @apply bg-blue-600 w-[80%] md:w-[60%] max-w-[500px] text-center mx-auto p-2 rounded-md mb-10;
+}
+
+.delete {
+    @apply bg-red-600 w-[80%] md:w-[60%] max-w-[500px] text-center mx-auto p-2 rounded-md mb-10;
+}
+
+.delete-button {
+    @apply m-0 p-0 w-0 hover:bg-transparent;
+}
+
+/* About Page */
+.project-resources {
+    @apply flex flex-col lg:flex-row justify-center items-center gap-10;
+}
+
+.project-resources img {
+    @apply w-[300px] object-contain;
+}
